@@ -38,22 +38,22 @@ body {
 
 body {
   font-family: "Red Hat Display", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 @media (min-width: 43.75em) {
   body {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 h1 {
   font-weight: 900;
-  font-size: 22px;
+  font-size: 1.375rem;
   color: var(--dark-blue);
 }
 @media (min-width: 43.75em) {
   h1 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 }
 
@@ -105,7 +105,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(20px, 4vh, 70px) 0;
+  padding: clamp(1.25rem, 4vh, 4.375rem) 0;
 }
 @media (min-width: 43.75em) {
   body {
@@ -118,10 +118,10 @@ body {
 
 .card {
   background: var(--white);
-  width: min(450px, 100% - 46px);
-  border-radius: 20px;
+  width: min(28.125rem, 100% - 2.875rem);
+  border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0px 15px 20px var(--shadow);
+  box-shadow: 0rem 0.9375rem 1.25rem var(--shadow);
 }
 @media (max-width: 20.31125em) {
   .card {
@@ -137,44 +137,44 @@ body {
      object-position: center;
 }
 .card__content {
-  padding: clamp(30px, 4vh, 42px) 25px clamp(25px, 4vh, 35px);
+  padding: clamp(1.875rem, 4vh, 2.625rem) 1.5625rem clamp(1.5625rem, 4vh, 2.1875rem);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (max-width: 43.74875em) {
   .card__content {
-    padding-inline: 21px;
+    padding-inline: 1.3125rem;
   }
 }
 .card__content__title, .card__content__description {
   text-align: center;
 }
 .card__content__title {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 .card__content__description {
-  padding: 0 13px;
-  margin-bottom: 20px;
+  padding: 0 0.8125rem;
+  margin-bottom: 1.25rem;
 }
 @media (min-width: 43.75em) {
   .card__content__description {
-    padding: 0 30px;
+    padding: 0 1.875rem;
   }
 }
 .card__content__plan-container {
   background: var(--very-pale-blue);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: clamp(15px, 4vh, 25px);
-  margin-bottom: clamp(25px, 4vh, 32px);
+  padding: clamp(0.9375rem, 4vh, 1.5625rem);
+  margin-bottom: clamp(1.5625rem, 4vh, 2rem);
 }
 @media (max-width: 43.74875em) {
   .card__content__plan-container {
-    padding: 15px;
+    padding: 0.9375rem;
   }
 }
 @media (max-width: 20.31125em) {
@@ -182,23 +182,26 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: repeat(2, auto);
-    gap: 18px 5px;
+    gap: 1.125rem 0.3125rem;
   }
+}
+.card__content__plan-container img {
+  height: 3rem;
 }
 .card__content__plan-container .plan {
   flex: 1;
-  margin-left: clamp(19px, 3vw, 21px);
+  margin-left: clamp(1.1875rem, 3vw, 1.3125rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 @media (max-width: 43.74875em) {
   .card__content__plan-container .plan {
-    margin-left: 17px;
+    margin-left: 1.0625rem;
   }
 }
 .card__content__plan-container .container__change {
-  padding: 3px 0;
+  padding: 0.1875rem 0;
 }
 @media (max-width: 20.31125em) {
   .card__content__plan-container .container__change {
@@ -209,19 +212,19 @@ body {
 }
 .card__content .plan-btn {
   display: inline-block;
-  width: 120px;
-  height: 40px;
+  width: 7.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 .card__content .plan-btn--purple {
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
   background-color: var(--bright-blue);
-  box-shadow: 0px 8px 10px var(--shadow);
-  margin-bottom: clamp(15px, 2.5vh, 25px);
+  box-shadow: 0rem 0.5rem 0.625rem var(--shadow);
+  margin-bottom: clamp(0.9375rem, 2.5vh, 1.5625rem);
   transition: background-color 0.2s;
 }
 .card__content .plan-btn--purple:hover {

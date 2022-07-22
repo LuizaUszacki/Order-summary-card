@@ -8,7 +8,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(20px, 4vh, 70px) 0;
+    padding: clamp(u.rem(20), 4vh, u.rem(70)) 0;
 
     @include u.breakpoints-up(medium) {
         background: url('../images/pattern-background-desktop.svg'), var(--pale-blue);
@@ -21,10 +21,10 @@ body {
 
 .card {
     background: var(--white);
-    width: min(450px, 100% - 46px);
-    border-radius: 20px;
+    width: min(u.rem(450), 100% - u.rem(46));
+    border-radius: u.rem(20);
     overflow: hidden;
-    box-shadow: 0px 15px 20px var(--shadow);
+    box-shadow: u.rem(0) u.rem(15) u.rem(20) var(--shadow);
 
     @include u.breakpoints-down(small) {
         width: 90vw;
@@ -40,13 +40,13 @@ body {
     }
 
     &__content {
-        padding: clamp(30px, 4vh, 42px) 25px clamp(25px, 4vh, 35px);
+        padding: clamp(u.rem(30), 4vh, u.rem(42)) u.rem(25) clamp(u.rem(25), 4vh, u.rem(35));
         display: flex;
         flex-direction: column;
         align-items: center;
 
         @include u.breakpoints-down(medium) {
-            padding-inline: 21px;
+            padding-inline: u.rem(21);
         }
 
         &__title,
@@ -55,53 +55,57 @@ body {
         }
 
         &__title {
-            margin-bottom: 15px;
+            margin-bottom: u.rem(15);
         }
 
         &__description {
-            padding: 0 13px;
-            margin-bottom: 20px;
+            padding: 0 u.rem(13);
+            margin-bottom: u.rem(20);
 
             @include u.breakpoints-up(medium) {
-                padding: 0 30px;
+                padding: 0 u.rem(30);
             }
         }
 
         &__plan-container {
             background: var(--very-pale-blue);
-            border-radius: 10px;
+            border-radius: u.rem(10);
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: clamp(15px, 4vh, 25px);
-            margin-bottom: clamp(25px, 4vh, 32px);
+            padding: clamp(u.rem(15), 4vh, u.rem(25));
+            margin-bottom: clamp(u.rem(25), 4vh, u.rem(32));
 
             @include u.breakpoints-down(medium) {
-                padding: 15px;
+                padding: u.rem(15);
             }
 
             @include u.breakpoints-down(small) {
                 display: grid;
                 grid-template-columns: auto 1fr;
                 grid-template-rows: repeat(2, auto);
-                gap: 18px 5px;
+                gap: u.rem(18) u.rem(5);
+            }
+
+            img {
+                height: u.rem(48);
             }
 
             .plan {
                 flex: 1;
-                margin-left: clamp(19px, 3vw, 21px);
+                margin-left: clamp(u.rem(19), 3vw, u.rem(21));
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
 
                 @include u.breakpoints-down(medium) {
-                    margin-left: 17px;
+                    margin-left: u.rem(17);
                 }                
             }
 
             .container__change {
-                padding: 3px 0;
+                padding: u.rem(3) 0;
 
                 @include u.breakpoints-down(small) {
                     grid-column: 1 / 3;
@@ -113,19 +117,19 @@ body {
 
         .plan-btn {
             display: inline-block;
-            width: 120px;
-            height: 40px;
+            width: u.rem(120);
+            height: u.rem(40);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 10px; 
+            border-radius: u.rem(10); 
 
             &--purple {
                 width: 100%;
-                height: 50px;
+                height: u.rem(50);
                 background-color: var(--bright-blue);
-                box-shadow: 0px 8px 10px var(--shadow);
-                margin-bottom: clamp(15px, 2.5vh, 25px);
+                box-shadow: u.rem(0) u.rem(8) u.rem(10) var(--shadow);
+                margin-bottom: clamp(u.rem(15), 2.5vh, u.rem(25));
                 transition: background-color .2s;
 
                 &:hover {
