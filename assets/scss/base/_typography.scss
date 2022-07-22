@@ -1,0 +1,60 @@
+@use '../utils' as u;
+
+body {
+    font-family: u.$font;
+    font-size: 14px;
+
+    @include u.breakpoints-up(medium) {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--dark-blue);
+
+    @include u.breakpoints-up(medium) {
+        font-size: 25px;
+    }
+}
+
+p {
+    color: var(--desaturated-blue);
+    line-height: 1.6;
+}
+
+.plan {
+    line-height: 1;
+}
+
+.plan__type {
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.container__change {
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--bright-blue);
+    transition: color .2s, text-decoration-color .2s;
+
+    &:hover {
+        text-decoration-color: transparent;
+        color: var(--light-blue);
+    }
+}
+
+.plan-btn {
+    font-weight: 700;
+    color: var(--desaturated-blue);
+    transition: color .2s;
+
+    &--blue:hover {
+        color: var(--dark-blue);
+    }
+
+    &--purple {
+        color: var(--white);
+    }
+}

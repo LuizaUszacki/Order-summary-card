@@ -1,0 +1,31 @@
+@use './functions' as f;
+
+$breakpoints-up: (
+    'small': f.em(325),
+    'medium': f.em(700),
+    'large': f.em(1000),
+);
+
+$breakpoints-down: (
+    'small': f.em(324.98),
+    'medium': f.em(699.98),
+    'large': f.em(999.98),
+);
+
+@mixin breakpoints-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+};
+
+@mixin breakpoints-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+};
+
+@mixin breakpoints-down-height {
+    @media (max-height: 750) {
+        @content;
+    }
+};
